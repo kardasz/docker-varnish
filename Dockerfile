@@ -13,7 +13,7 @@ RUN \
     apt-get update && \
     apt-get -y install varnish
 
-CMD ["service varnish restart"]
+#CMD ["/usr/sbin/service", "varnish", "start"]
 
 EXPOSE 80
 EXPOSE 6082
