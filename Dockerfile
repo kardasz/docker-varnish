@@ -1,5 +1,8 @@
 FROM debian:jessie
 MAINTAINER Krzysztof Kardasz <krzysztof@kardasz.eu>
+
+DEBIAN_FRONTEND noninteractive
+
 RUN \
     apt-get update && \
     apt-get -y upgrade && \
