@@ -1,7 +1,7 @@
 FROM debian:jessie
 MAINTAINER Krzysztof Kardasz <krzysztof@kardasz.eu>
 
-DEBIAN_FRONTEND noninteractive
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN \
     apt-get update && \
