@@ -13,7 +13,6 @@ RUN \
     apt-get update && \
     apt-get -y install varnish
 
-#CMD ["/usr/sbin/service", "varnish", "start"]
+EXPOSE 80 6082
 
-EXPOSE 80
-EXPOSE 6082
+ENTRYPOINT ["/usr/sbin/varnishd", "-F", "-a", "0.0.0.0:80", "-T", "0.0.0.0:6082", "-f", "/etc/varnish/default.vcl", "-s", "malloc,256m"]
