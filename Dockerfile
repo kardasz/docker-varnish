@@ -15,4 +15,4 @@ RUN \
 
 EXPOSE 80 6082
 
-ENTRYPOINT ["/usr/sbin/varnishd", "-F", "-a", "0.0.0.0:80", "-T", "0.0.0.0:6082", "-f", "/etc/varnish/default.vcl", "-s", "malloc,256m"]
+# ENTRYPOINT ["/usr/sbin/varnishd", "-F", "-a", "0.0.0.0:80", "-T", "0.0.0.0:6082", "-f", "/etc/varnish/default.vcl", "-s", "malloc,256m"]
