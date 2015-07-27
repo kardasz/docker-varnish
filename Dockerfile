@@ -2,11 +2,6 @@ FROM debian:jessie
 MAINTAINER Krzysztof Kardasz <krzysztof@kardasz.eu>
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV VARNISH_OPTS="-a :80 \
-                 -T :6082 \
-                 -f /etc/varnish/default.vcl \
-                 -S /etc/varnish/secret \
-                 -s malloc,256m"
 
 RUN \
     apt-get update && \
