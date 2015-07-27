@@ -22,5 +22,3 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 EXPOSE 80 6082
 
 CMD ["varnishd", "-a", ":80", "-T", ":6082", "-f", "/etc/varnish/default.vcl", "-s", "malloc,256m"]
-
-
