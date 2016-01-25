@@ -1,2 +1,2 @@
 # docker-varnish
-Docker Varnish 4.0 from Debian 8
+Debian 8, Varnish 4.1
