@@ -20,7 +20,7 @@ RUN \
 
 RUN \
     curl https://repo.varnish-cache.org/GPG-key.txt | apt-key add - && \
-    echo "deb https://repo.varnish-cache.org/debian/ jessie varnish-4.0" >> /etc/apt/sources.list.d/varnish-cache.list && \
+    echo "deb https://repo.varnish-cache.org/debian/ jessie varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list && \
     apt-get update && \
     apt-get -y install varnish
 
