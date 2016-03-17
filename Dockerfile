@@ -3,15 +3,6 @@ MAINTAINER Krzysztof Kardasz <krzysztof@kardasz.eu>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV OWNER_USER            varnish
-ENV OWNER_USER_UID        2000
-ENV OWNER_GROUP           varnish
-ENV OWNER_GROUP_GID       2000
-
-RUN \
-    groupadd --gid ${OWNER_GROUP_GID} -r ${OWNER_GROUP} && \
-    useradd -r --uid ${OWNER_USER_UID} -g ${OWNER_GROUP} ${OWNER_USER}
-    
 RUN \
     apt-get update && \
     apt-get -y upgrade && \
@@ -23,10 +14,6 @@ RUN \
     echo "deb https://repo.varnish-cache.org/debian/ jessie varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list && \
     apt-get update && \
     apt-get -y install varnish
-
-COPY docker-entrypoint.sh /
-
-ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 80 6082
 
